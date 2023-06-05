@@ -1,4 +1,4 @@
-package com.example.api.ramsha.myapplication;
+package com.example.api.ramsha.myapplication.listview;
 
 public class FruitsDataModel {
     String name;

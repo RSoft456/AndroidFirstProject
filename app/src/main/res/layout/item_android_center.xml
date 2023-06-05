@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+<ImageView
+    android:id="@+id/gridImages"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
+    android:background="@color/black"
+android:scaleType="fitXY"
+    android:src="@drawable/apple"/>
+    <TextView
+        android:id="@+id/overlayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:padding="5dp"
+android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/san"
+        android:layout_gravity="bottom"
+        />
+
+</FrameLayout>

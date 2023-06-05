@@ -1,11 +1,12 @@
-package com.example.api.ramsha.myapplication;
+package com.example.api.ramsha.myapplication.listview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListAdapter;
+
+import com.example.api.ramsha.myapplication.R;
 
 import java.util.ArrayList;
 

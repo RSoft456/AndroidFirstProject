@@ -1,4 +1,4 @@
-package com.example.api.ramsha.myapplication;
+package com.example.api.ramsha.myapplication.listview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.api.ramsha.myapplication.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class FruitsAdapter extends ArrayAdapter<FruitsDataModel>{
 
