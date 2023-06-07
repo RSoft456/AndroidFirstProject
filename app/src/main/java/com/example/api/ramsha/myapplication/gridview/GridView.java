@@ -4,17 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
-
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.example.api.ramsha.myapplication.R;
 import com.example.api.ramsha.myapplication.listview.FruitsDataModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class GridView extends AppCompatActivity {
     Toolbar toolbar;
     android.widget.GridView gridView;
+    FloatingActionButton FAB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class GridView extends AppCompatActivity {
         toolbar= findViewById(R.id.toolbar);
         gridView=findViewById(R.id.gridView);
         toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
+        FAB = findViewById(R.id.fabbutton);
         ArrayList<AndroidCenterDataModel> androidList = new ArrayList<AndroidCenterDataModel>();
         androidList.add(new AndroidCenterDataModel(R.drawable.pic1,"Lync 2013 gets updated for android with new anonymous join features and is very flexible."));
         androidList.add(new AndroidCenterDataModel(R.drawable.pic2,"Vodafone U.K. starts Android Lollipop update for LG G3"));
@@ -41,5 +45,6 @@ public class GridView extends AppCompatActivity {
         androidList.add(new AndroidCenterDataModel(R.drawable.pic4,"Nexus 9 with LTE now on sale in the google playe store"));
         AndroidCenterAdapter adapter = new AndroidCenterAdapter(this,androidList);
         gridView.setAdapter(adapter);
+        FAB.setImageTintList(ColorStateList.valueOf(Color.WHITE));
     }
 }

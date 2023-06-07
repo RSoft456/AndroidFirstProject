@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customFont"
+        >
+        <item name="font">@color/blue</item>
+        <item name="sizePercent">5</item>
+        <item name="android:fontFamily" >monospace</item>
+    </style>
+
+
+</resources>

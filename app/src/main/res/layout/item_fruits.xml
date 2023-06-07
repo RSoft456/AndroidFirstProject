@@ -38,7 +38,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:ellipsize="end"
-        android:fontFamily="@font/san"
+        style="@style/customFont"
         android:maxLines="2"
         android:text="TextView"
         android:textSize="16sp"
