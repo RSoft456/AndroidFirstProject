@@ -57,7 +57,7 @@ public class BroadcastReceivers extends AppCompatActivity {
             }
         };
 
-//click Listeners
+        //click Listeners
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

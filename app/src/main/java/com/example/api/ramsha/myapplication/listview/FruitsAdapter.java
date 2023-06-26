@@ -36,7 +36,6 @@ public class FruitsAdapter extends ArrayAdapter<FruitsDataModel>{
         image.setImageResource(list.getImageid());
         return convertView;
 
-       // return super.getView(position, convertView, parent);
     }
 
 

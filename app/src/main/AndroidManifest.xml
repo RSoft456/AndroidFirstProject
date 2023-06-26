@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
         <activity
-            android:name=".BroadcastReceivers"
+            android:name=".imagesslideshow.Gallery"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,20 +35,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".notificationrepeatingjobscheduler.NotificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <activity
-            android:name=".CustomThemes"
+            android:name=".notificationrepeatingjobscheduler.Notification_JobScheduler"
             android:exported="true">
 
         </activity>
         <activity
+            android:name=".notificationsrepeating.Notification"
+            android:exported="false"/>
+
+        <service
+            android:name=".musicplayer.MusicService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".notificationsrepeating.NotificationService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".musicplayer.MusicPlayer"
+            android:exported="true" />
+
+        <receiver android:name=".notificationsrepeating.NotificationService" />
+
+        <activity
+            android:name=".BroadcastReceivers"
+            android:exported="true" />
+
+        <activity
+            android:name=".CustomThemes"
+            android:exported="true" />
+
+        <activity
             android:name=".gridview.GridView"
-            android:exported="true"></activity>
+            android:exported="true" />
+
         <activity
             android:name=".listview.ListView"
             android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>
